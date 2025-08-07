@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe - Choose Mode</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url("game.bg.jpg");
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      text-align: center;
+      background-color: rgb(37, 35, 35);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      margin: auto;
+      border: #3e446a 0.2rem solid;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    .btn {
+      display: block;
+      width: 240px;
+      margin: 15px auto;
+      padding: 12px 20px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      background-color: #5c6bc0;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #7986cb;
+    }
+
+    .btn-desc {
+      font-size: 0.9rem;
+      color: #ddd;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      padding: 10px 0;
+      background-color: #3e446a;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #ddd;
+    }
+
+    .footer span {
+      color: #ff6f91;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Tic-Tac-Toe!</h1>
+    <p>Pick a mode to start playing</p>
+
+    <button class="btn" onclick="location.href='game.html?mode=vsFriend'">Play With Friend</button>
+    <div class="btn-desc">Challenge a friend in classic mode!</div>
+
+    <button class="btn" onclick="location.href='game.html?mode=vsComp'">Play With Computer</button>
+    <div class="btn-desc">Take on the AI and prove your skills!</div>
+  </div>
+
+  <div class="footer">
+    Made with ❤️ by <span>Adina Hawaldar</span>
+  </div>
+</body>
+</html>
