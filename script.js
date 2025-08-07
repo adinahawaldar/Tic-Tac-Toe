@@ -3,11 +3,10 @@ const mode = urlParams.get("mode");
 let vsComputer = (mode === "vsComp");
 
 let boxes, reset, newGame, msgContainer, msg;
-let turnO = true; // true for O's turn, false for X's turn
+let turnO = true; 
 let isGameOver = false;
-let scores = { X: 0, O: 0, draw: 0 }; // Track scores
+let scores = { X: 0, O: 0, draw: 0 }; 
 
-// DOM elements for scores and turn display
 let currentPlayerDisplay, xScoreDisplay, oScoreDisplay, drawScoreDisplay;
 
 const winPatterns = [
@@ -36,14 +35,12 @@ document.addEventListener("DOMContentLoaded", () => {
     reset.addEventListener("click", resetGame);
     newGame.addEventListener("click", newGameHandler);
 
-    // Initialize displays
     updateTurnDisplay();
     updateScores();
     
     resetGame();
 });
 
-// Create missing elements if they don't exist in HTML
 function createTurnDisplay() {
     const container = document.createElement('div');
     container.className = 'turn-indicator';
@@ -100,7 +97,6 @@ function checkWinner() {
         }
     }
 
-    // Check draw
     if ([...boxes].every(box => box.innerText !== "")) {
         scores.draw++;
         updateScores();
@@ -136,7 +132,6 @@ function resetGame() {
 
 function newGameHandler() {
     resetGame();
-    // Don't reset scores for new game
 }
 
 function updateTurnDisplay() {
@@ -156,7 +151,6 @@ document.querySelector("#back-home").addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
-// AI Functions (keep your existing implementation)
 function getBestMove() {
     let bestScore = -Infinity;
     let move = -1;
